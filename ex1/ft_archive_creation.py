@@ -57,6 +57,7 @@ def main() -> None:
         save_file(new_filename, new_content)
     except OSError as e:
         print(f"Error opening file '{new_filename}': {e}")
+        print("Data not saved.")
         return
     print(f"Data saved in file '{new_filename}'.")
 
