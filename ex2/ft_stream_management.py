@@ -43,7 +43,7 @@ def main() -> None:
         return
     else:
         print_content(content)
-        print(f"File '{filename}' closed.")
+        print(f"File '{filename}' closed.\n")
 
     print("Transform data:")
     new_content = transform_content(content)
