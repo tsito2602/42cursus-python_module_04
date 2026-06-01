@@ -28,7 +28,7 @@ def print_content(content: str) -> None:
 
 def main() -> None:
     if len(sys.argv) != 2:
-        print("Usage: ft_archive_creation.py <file>")
+        print("Usage: ft_stream_management.py <file>")
         return
     filename = sys.argv[1]
 
