@@ -5,11 +5,13 @@ def secure_archive(
         with open(filename, mode) as file:
             if mode == "r":
                 content = file.read()
-                return (True, content)
-            if mode == "w":
+                result = (True, content)
+            elif mode == "w":
                 file.write(content)
-                return (True, "Content successfully written to file")
-            return (False, "Invalid mode")
+                result = (True, "Content successfully written to file")
+            else:
+                result = (False, "Invalid mode")
+        return result
     except OSError as e:
         return (False, str(e))
 
