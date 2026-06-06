@@ -37,6 +37,7 @@ def main() -> None:
     try:
         content = read_file(filename)
     except OSError as e:
+        sys.stdout.flush()
         print(
             f"[STDERR] Error opening file '{filename}': {e}", file=sys.stderr
         )
@@ -60,6 +61,7 @@ def main() -> None:
     try:
         save_file(new_filename, new_content)
     except OSError as e:
+        sys.stdout.flush()
         print(
             f"[STDERR] Error opening file '{new_filename}': {e}",
             file=sys.stderr,
