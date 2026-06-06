@@ -12,9 +12,7 @@ def main() -> None:
     print(f"Accessing file '{filename}'")
     try:
         file: typing.IO[str] = open(filename, "r")
-    except FileNotFoundError as e:
-        print(f"Error opening file '{filename}': {e}")
-    except PermissionError as e:
+    except OSError as e:
         print(f"Error opening file '{filename}': {e}")
     else:
         content = file.read()
